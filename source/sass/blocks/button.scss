@@ -1,0 +1,43 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.button {
+  display: block;
+  font-family: inherit;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: variables.$color-text-accent;
+  background-color: variables.$primary-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+}
+
+.button--search {
+  padding: 16px 49px;
+}
+
+.button--form {
+  padding: 18px 34px 14px 32px;
+  width: 100%;
+
+  @include mixins.tablet {
+    padding: 18px 38px 14px 28px;
+  }
+}

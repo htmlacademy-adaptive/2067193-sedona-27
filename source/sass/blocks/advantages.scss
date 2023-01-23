@@ -1,0 +1,94 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.advantages__header {
+  padding: 34px 20px 16px 18px;
+
+  @include mixins.tablet {
+    padding: 49px 124px 55px;
+  }
+
+  @include mixins.desktop {
+    padding: 59px 356px 45px;
+  }
+}
+
+.advantages__list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: advantage__description;
+
+  @include mixins.tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.advantages__list::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 37px;
+  background-image: url("../img/advantages-triangle.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  left: 0;
+  top: 0;
+
+  @include mixins.tablet {
+    display: none;
+  }
+}
+
+.advantages__inner--reverse {
+  order: -1;
+}
+
+.advantages__item {
+  @include mixins.tablet {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+}
+
+.advantages__item--column {
+  @include mixins.tablet {
+    width: 33.33%;
+  }
+}
+
+.advantages__sublist {
+  margin: 0;
+  padding: 23px 18px 52px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 22px;
+  list-style: none;
+
+  @include mixins.tablet {
+    padding: 60px 30px 61px 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 66px;
+  }
+
+  @include mixins.desktop {
+    padding: 60px 58px 82px 58px;
+    column-gap: 116px;
+  }
+}
+
+.advantages__image {
+  display: block;
+  background-color: variables.$primary-color;
+  object-fit: cover;
+
+  @include mixins.tablet {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,38 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.approve {
+  position: relative;
+  max-width: variables.$mobile-width;
+  box-sizing: border-box;
+  margin: auto;
+  background-color: variables.$color-text-accent;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  text-align: center;
+
+  @include mixins.tablet {
+    max-width: 640px;
+  }
+}
+
+.approve__header {
+  padding: 39px 39px 30px;
+
+  @include mixins.tablet {
+    padding: 57px 98px 34px;
+  }
+}
+
+.approve__footer {
+  padding: 20px;
+  background-color: variables.$secondary-color;
+
+  @include mixins.tablet {
+    padding: 44px 91px;
+  }
+}
+
+.approve__button {
+  padding: 18px 62px 14px;
+  width: 100%;
+}
