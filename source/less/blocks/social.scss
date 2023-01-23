@@ -1,0 +1,18 @@
+.social {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 6px;
+}
+
+.social__link {
+  display: block;
+  font-family: inherit;
+  background-color: #81b3d2;
+  color: #ffffff;
+  min-width: 48px;
+  min-height: 48px;
+  box-sizing: border-box;
+  position: relative;
+}
