@@ -1,0 +1,32 @@
+@use "../base.scss";
+
+.advantage {
+  padding: 39px 18px 35px;
+  background-color: #eeeeee;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantage__title {
+  margin: 0;
+  margin-bottom: 11px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.advantage__description {
+  margin: 0;
+}
+
+.advantage__description::before {
+  display: block;
+  counter-increment: advantage__description;
+  content: "— №" counter(advantage__description) " —";
+  margin-bottom: 17px;
+}
+
+.advantage--light {
+  background-color: variables.$primary-color;
+  color: variables.$color-text-accent;
+}
