@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page__body">
     <div class="page__container">
-      <header class="page-header">
-        <a class="page-header__logo">
-          <img src="img/logo.svg" width="185" height="96" alt="Логотип города Седона.">
+      <header class="main-header">
+        <a class="main-header__logo logo">
+          <img class="logo__image" src="img/logo.svg" width="185" height="96" alt="Логотип города Седона.">
         </a>
-        <nav class="page-header__navigation navigation">
-          <button class="navigation__toggle button" type="button">
+        <nav class="main-header__navigation navigation">
+          <button class="navigation__toggle toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="navigation__list">
@@ -36,11 +37,12 @@
           <img class="hero__image" src="img/promo-text.svg" width="282" height="214" alt="Добро пожаловать в Седону.">
         </div>
         <section class="advantages">
-          <header class="advantages__header">
+          <header class="advantages__header heading">
             <h2 class="visually-hidden">Преимущества.</h2>
-            <p class="advantages__intro"><strong>Седона — небольшой городок в Аризоне, заслуживающий большего!</strong>
+            <p class="heading__title">
+              <strong>Седона — небольшой городок в Аризоне, заслуживающий большего!</strong>
             </p>
-            <p class="advantages__caption">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+            <p class="heading__intro">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
           </header>
           <ol class="advantages__list">
             <li class="advantages__item">
@@ -95,44 +97,41 @@
           </ol>
         </section>
         <section class="search">
-          <h2 class="visually-hidden">Поиск гостиницы в Седоне.</h2>
-          <p class="search__title">Заинтересовались?</p>
-          <p class="search__description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения
+          <header class="search__header heading">
+            <h2 class="visually-hidden">Поиск гостиницы в Седоне.</h2>
+            <p class="heading__title">Заинтересовались?</p>
+            <p class="heading__intro">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
             гостиниц в Седоне&nbsp;</p>
-          <a class="button search--button" href="#">Поиск гостиницы в Седоне</a>
+          </header>
+          <a class="button button--search" href="#">Поиск гостиницы в Седоне</a>
           <div class="search__map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994943.0972920308!2d-111.82951624876816!3d35.00317655746559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1659211446533!5m2!1sru!2sru"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </section>
       </main>
-      <footer class="page-footer">
-        <div class="page-footer__hashtag hashtag">
-          <a class="hashtag__link" href="https://twitter.com/hashtag/visitsedona">#visitSEDONA</a>
-        </div>
-        <section class="page-footer__social social">
-          <h2 class="visually-hidden">Мы в социальных сетях.</h2>
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">VKontakte.</span>
+      <footer class="main-footer">
+        <a class="main-footer__hashtag hashtag" href="https://twitter.com/hashtag/visitsedona">#visitSEDONA</a>
+        <ul class="main-footer__social social">
+          <li class="social__item">
+            <a class="social__link" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">VKontakte.</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Telegram.</span>
               </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="https://t.me/htmlacademy">
-                <span class="visually-hidden">Telegram.</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
-                <span class="visually-hidden">Youtube.</span>
-              </a>
-            </li>
-          </ul>
-        </section>
-        <div class="page-footer__copyright copyright">
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Youtube.</span>
+            </a>
+          </li>
+        </ul>
+        <div class="main-footer__copyright copyright">
           <p class="copyright__text">Разработано</p>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <img class="copyright__image" width="27" height="35" src="img/logo-academy.svg" alt="HTML Academy">
