@@ -1,0 +1,66 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.text-control {
+  position: relative;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.text-control--icon::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.text-control--icon .text-control__input {
+  padding-right: 70px;
+}
+
+.text-control--phone::after {
+  background-image: url("../img/form-phone.svg");
+}
+
+.text-control--mail::after {
+  background-image: url("../img/form-mail.svg");
+}
+
+.text-control__caption {
+  padding-left: 16px;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.text-control__input {
+  font-family: inherit;
+  padding: 12px 12px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: variables.$color-text-secondary;
+  background-color: variables.$secondary-color;
+  border: 4px solid transparent;
+  outline: none;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    background-color: variables.$color-text-accent;
+    border-color: #e5e5e5;
+  }
+}

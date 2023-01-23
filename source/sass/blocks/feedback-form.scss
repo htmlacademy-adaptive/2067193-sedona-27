@@ -1,0 +1,66 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.feedback-form__row {
+  @include mixins.tablet {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 88%;
+      position: absolute;
+      background-color: #dbdbdb;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @include mixins.desktop {
+    gap: 128px;
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 86%;
+      position: absolute;
+      background-color: #dbdbdb;
+      left: 51.5%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.feedback-form__notice {
+  display: block;
+  font-size: 12px;
+  line-height: 21px;
+  color: rgba(51, 51, 51, 0.6);
+  text-transform: uppercase;
+  text-align: end;
+
+  @include mixins.tablet {
+    font-size: 14px;
+    color: variables.$color-text-primary;
+  }
+}
+
+.feedback-form__footer {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include mixins.tablet {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  @include mixins.desktop {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}

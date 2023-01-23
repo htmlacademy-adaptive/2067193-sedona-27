@@ -1,0 +1,24 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.copyright {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: variables.$color-text-secondary;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    color: variables.$primary-color;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
+}
+
+.copyright__text {
+  margin: 0;
+  margin-right: 13px;
+}

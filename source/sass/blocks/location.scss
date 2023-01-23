@@ -1,0 +1,29 @@
+@use "../globals/mixins.scss";
+@use "../globals/variables.scss";
+
+.location {
+  margin-bottom: 10px;
+
+  @include mixins.tablet {
+    margin-bottom: 0;
+  }
+}
+
+.location__iframe {
+  display: block;
+  width: 100%;
+}
+
+.location__image {
+  display: none;
+  width: 100%;
+  background-color: #f2f1ec;
+}
+
+.location--nojs .location__iframe {
+  display: none;
+}
+
+.location--nojs .location__image {
+  display: block;
+}

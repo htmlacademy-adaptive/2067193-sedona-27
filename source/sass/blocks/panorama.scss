@@ -1,0 +1,15 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.panorama {
+  @include mixins.tablet {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.panorama--reverse {
+  @include mixins.tablet {
+    grid-template-columns: 2fr 1fr;
+  }
+}

@@ -1,0 +1,58 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.gallery {
+  @include mixins.tablet {
+    padding: 0 60px 0;
+  }
+
+  @include mixins.tablet {
+    padding: 0;
+  }
+}
+
+.gallery__header {
+  padding: 38px 20px 36px;
+  border-bottom: solid 1px #e5e5e5;
+
+  @include mixins.tablet {
+    padding: 66px 164px 81px;
+    border-bottom: none;
+  }
+
+  @include mixins.desktop {
+    padding: 98px 380px 90px;
+  }
+}
+
+.gallery__list {
+  @include mixins.tablet {
+    padding-left: 60px;
+    padding-right: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mixins.desktop {
+    padding: 0;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gallery__item {
+  position: relative;
+
+  @include mixins.tablet {
+    background-color: variables.$secondary-color;
+  }
+}
+
+.gallery__item:not(:first-child):nth-of-type(odd) {
+  @include mixins.tablet {
+    background-color: #eaeaea;
+  }
+}
+
+.gallery__item:first-child {
+  grid-column: 1/-1;
+}

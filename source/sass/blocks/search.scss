@@ -1,0 +1,26 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.search {
+  padding: 40px 18px 49px;
+
+  @include mixins.tablet {
+    padding: 61px 155px 58px;
+  }
+
+  @include mixins.desktop {
+    padding: 61px 371px 66px;
+  }
+}
+
+.search__header {
+  margin-bottom: 32px;
+
+  @include mixins.tablet {
+    margin-bottom: 42px;
+  }
+
+  @include mixins.desktop {
+    margin-bottom: 47px;
+  }
+}

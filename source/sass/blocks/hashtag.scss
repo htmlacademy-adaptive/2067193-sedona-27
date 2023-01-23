@@ -1,0 +1,18 @@
+@use "../globals/variables.scss";
+
+.hashtag {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: variables.$color-text-secondary;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    color: variables.$primary-color;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
+}
