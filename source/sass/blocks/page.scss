@@ -1,0 +1,35 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  margin: 0;
+  height: 100%;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: variables.$color-text-primary;
+  background-color: variables.$secondary-color;
+}
+
+.page__container {
+  display: flex;
+  flex-direction: column;
+  max-width: variables.$mobile-width;
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: variables.$color-text-accent;
+
+  @include mixins.tablet {
+    max-width: variables.$tablet-width;
+  }
+
+  @include mixins.desktop {
+    max-width: variables.$desktop-width;
+    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  }
+}

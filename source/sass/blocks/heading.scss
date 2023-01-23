@@ -1,0 +1,74 @@
+@use "../globals/mixins.scss";
+
+.heading {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.heading__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 35px;
+
+  @include mixins.tablet {
+    font-size: 21px;
+  }
+}
+
+.heading__title--size-m {
+  @include mixins.tablet {
+    font-size: 30px;
+  }
+}
+
+.heading__title--size-l {
+  font-size: 21px;
+
+  @include mixins.tablet {
+    font-size: 30px;
+  }
+}
+
+.heading__title--advantages-margin {
+  @include mixins.tablet {
+    margin-bottom: 29px;
+  }
+}
+
+.heading__title--search-margin {
+  margin-bottom: 22px;
+
+  @include mixins.tablet {
+    margin-bottom: 30px;
+  }
+}
+
+.heading__title--gallery-margin {
+  margin-bottom: 25px;
+
+  @include mixins.tablet {
+    margin-bottom: 32px;
+  }
+}
+
+.heading__title--presentation-margin {
+  margin-bottom: 27px;
+
+  @include mixins.tablet {
+    margin-bottom: 30px;
+  }
+}
+
+.heading__title--feedback-margin {
+  margin-bottom: 24px;
+
+  @include mixins.desktop {
+    margin-bottom: 32px;
+  }
+}
+
+.heading__intro {
+  margin: 0;
+}

@@ -1,0 +1,25 @@
+@use "../globals/variables.scss";
+
+@mixin mobile-only {
+  @media screen and (max-width: variables.$mobile-only-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: variables.$tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: variables.$desktop-width) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}

@@ -4,141 +4,172 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="preload" href="./fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="./fonts/ptsansbold.woff2" as="font">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <div class="page__container">
       <header class="main-header">
-        <a class="main-header__logo logo">
-          <img class="logo__image" src="img/logo.svg" width="185" height="96" alt="Логотип города Седона.">
-        </a>
-        <button class="main-header__toggle toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <nav class="main-header__navigation navigation">
+        <nav class="navigation navigation--closed navigation--nojs">
+          <button class="navigation__toggle toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
           <ul class="navigation__list">
-            <li class="navigation__item navigation__item--active">
-              <a class=navigation__link href="#">Главная</a>
+            <li class="navigation__item">
+              <a class="navigation__link" href="index.html">Главная</a>
             </li>
             <li class="navigation__item">
-              <a class=navigation__link href="catalog.html">Фото и видео</a>
+              <a class="navigation__link" href="catalog.html">Фото и видео</a>
             </li>
             <li class="navigation__item">
-              <a class=navigation__link href="form.html">Форма отзыва</a>
+              <a class="navigation__link" aria-current="page">Форма отзыва</a>
             </li>
             <li class="navigation__item">
-              <a class=navigation__link href="htmlacademy.ru">HTML Academy</a>
+              <a class="navigation__link" href="https://htmlacademy.ru/">HTML Academy</a>
             </li>
           </ul>
         </nav>
+        <a class="main-header__logo logo" href="index.html">
+          <img class="logo__image" src="img/logo.svg" width="185" height="96" alt="Логотип города Седона.">
+        </a>
       </header>
       <main class="main-container">
-        <h1 class="visually-hidden">Туризм в городе Седона.</h1>
+        <h1 class="visually-hidden">Форма для вашего отзыва</h1>
         <div class="hero">
-          <img class="hero__image" src="img/hero-text.svg" width="282" height="214" alt="Добро пожаловать в Седону.">
+          <img class="hero__image" src="img/hero-text-catalog.svg" width="229" height="39" alt="Добро пожаловать в Седону.">
         </div>
-        <section class="advantages">
-          <header class="advantages__header heading">
-            <h2 class="visually-hidden">Преимущества.</h2>
-            <p class="heading__title"><strong>Седона — небольшой городок в Аризоне, заслуживающий большего!</strong>
-            </p>
-            <p class="heading__intro">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+        <section class="feedback">
+          <header class="feedback__header heading">
+            <h2 class="heading__title heading__title--size-m heading__title--feedback-margin">Оставьте свой отзыв</h2>
+            <p class="heading__intro">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
           </header>
-          <ol class="advantages__list">
-            <li class="advantages__item">
-              <div class="panorama">
-                <div class="advantage advantage--light">
-                  <h3 class="advantage__title">Настоящий городок</h3>
-                  <p class="advantage__description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-                </div>
-                <img class="advantages__image" src="img/advantages-city.jpg" width="320" height=260" alt="Город Седона.">
-              </div>
-              <ul class="advantages__sublist">
-                <li class="advantages__subitem advantage-city">
-                  <h4 class="advantage-city__title">Жильё</h4>
-                  <p class="advantage-city__description">Рекомендуем пожить в настоящем мотеле, всё как в
-                    кино!</p>
+          <form class="feedback__form feedback-form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="feedback-form__row">
+              <fieldset class="feedback-form__group form-group form-group--width form-group--border-none">
+                <legend class="form-group__description form-group__description--padding-left">Представьтесь:</legend>
+                <label class="form-group__control form-group__control--margin-right text-control">
+                  <span class="text-control__caption">Имя*:</span>
+                  <input class="text-control__input" type="text" name="name" placeholder="Имя" value="Анна" required>
+                </label>
+                <label class="form-group__control form-group__control--margin-right text-control">
+                  <span class="text-control__caption">Фамилия*:</span>
+                  <input class="text-control__input" type="text" name="lastname" placeholder="Фамилия" value="Семенова" required>
+                </label>
+                <label class="form-group__control form-group__control--margin-right text-control">
+                  <span class="text-control__caption">Отчество:</span>
+                  <input class="text-control__input" type="text" name="patronymic" placeholder="Отчество" value="Павловна">
+                </label>
+              </fieldset>
+              <fieldset class="feedback-form__group form-group form-group--border-none">
+                <legend class="form-group__description form-group__description--padding-right">Контактная информация:</legend>
+                <label class="form-group__control form-group__control--margin-left text-control text-control--icon text-control--phone">
+                  <span class="text-control__caption">Контактный телефон*:</span>
+                  <input class="text-control__input" type="tel" name="phone" placeholder="Введите телефон" required>
+                </label>
+                <label class="form-group__control form-group__control--margin-left text-control text-control--icon text-control--mail">
+                  <span class="text-control__caption">Электронная почта*:</span>
+                  <input class="text-control__input" type="email" name="email" placeholder="Введите e-mail" required>
+                </label>
+              </fieldset>
+            </div>
+            <fieldset class="feedback-form__group form-group">
+              <legend class="form-group__description">Ваше общее впечатление:</legend>
+              <ul class="form-group__list">
+                <li class="form-group__item">
+                  <label class="form-group__control radio-control">
+                    <input class="radio-control__input" type="radio" name="impression" value="positive" checked>
+                    <span class="radio-control__mark"></span>
+                    <span class="radio-control__caption">Скорее положительное</span>
+                  </label>
                 </li>
-                <li class="advantages__subitem advantage-city">
-                  <h4 class="advantage-city__title">Еда</h4>
-                  <p class="advantage-city__description">Всегда заказывайте фирменный бургер, вы не
-                    разочаруетесь!</p>
+                <li class="form-group__item">
+                  <label class="form-group__control radio-control">
+                    <input class="radio-control__input" type="radio" name="impression" value="negative">
+                    <span class="radio-control__mark"></span>
+                    <span class="radio-control__caption">Скорее отрицательное</span>
+                  </label>
                 </li>
-                <li class="advantages__subitem advantage-city">
-                  <h4 class="advantage-city__title">Сувениры</h4>
-                  <p class="advantage-city__description">Не только китайского, но и местного
-                    производства!</p>
+                <li class="form-group__item">
+                  <label class="form-group__control radio-control">
+                    <input class="radio-control__input" type="radio" name="impression" value="neutral">
+                    <span class="radio-control__mark"></span>
+                    <span class="radio-control__caption">Затрудняюсь ответить</span>
+                  </label>
                 </li>
               </ul>
-            </li>
-            <li class="advantages__item">
-              <div class="panorama">
-                <div class="advantage advantage--light">
-                  <h3 class="advantage__title">Там есть мост&nbsp;дьявола</h3>
-                  <p class="advantage__description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-                </div>
-                <img class="advantages__image" src="img/advantages-bridge.jpg" width="320" height="260" alt="Мост дьявола.">
-              </div>
-            </li>
-            <li class="advantages__item">
-              <div class="advantage advantage--dark">
-                <h3 class="advantage__title">Небольшая площадь</h3>
-                <p class="advantage__description">Все достопримечательности находятся очень близко</p>
-              </div>
-            </li>
-            <li class="advantages__item">
-              <div class="advantage advantage--dark">
-                <h3 class="advantage__title">Красивая дорога</h3>
-                <p class="advantage__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-              </div>
-            </li>
-            <li class="advantages__item">
-              <div class="advantage advantage--dark">
-                <h3 class="advantage__title">Мало туристов</h3>
-                <p class="advantage__description">Большинство едет в Гранд Каньон и толпится там</p>
-              </div>
-            </li>
-          </ol>
+            </fieldset>
+            <fieldset class="feedback-form__group form-group form-group--padding-bottom">
+              <legend class="form-group__description">Посещенные достопримечательности:</legend>
+              <ul class="form-group__list form-group__list--checkbox">
+                <li class="form-group__item">
+                  <label class="form-group__control checkbox-control">
+                    <input class="checkbox-control__input checkbox-control__input--checked" type="checkbox" name="bridge" checked>
+                    <span class="checkbox-control__mark"></span>
+                    <span class="checkbox-control__caption">Мост Дьявола</span>
+                  </label>
+                </li>
+                <li class="form-group__item">
+                  <label class="form-group__control checkbox-control">
+                    <input class="checkbox-control__input checkbox-control__input--checked" type="checkbox" name="mountain" checked>
+                    <span class="checkbox-control__mark"></span>
+                    <span class="checkbox-control__caption">Гора-Колокол</span>
+                  </label>
+                </li>
+                <li class="form-group__item">
+                  <label class="form-group__control checkbox-control">
+                    <input class="checkbox-control__input checkbox-control__input--checked" type="checkbox" name="park" checked>
+                    <span class="checkbox-control__mark"></span>
+                    <span class="checkbox-control__caption">Слайд-парк</span>
+                  </label>
+                </li>
+                <li class="form-group__item">
+                  <label class="form-group__control checkbox-control">
+                    <input class="checkbox-control__input" type="checkbox" name="rocks">
+                    <span class="checkbox-control__mark"></span>
+                    <span class="checkbox-control__caption">Красные скалы</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="feedback-form__group form-group form-group--textarea-padding">
+              <legend class="form-group__description">Опишите свои эмоции:</legend>
+              <textarea class="form-group__textarea" name="review" id="review" cols="23" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+            </fieldset>
+            <div class="feedback-form__footer">
+              <button class="feedback-form__submit button button--form" type="submit">Отправить отзыв</button>
+              <small class="feedback-form__notice">* — обязательные поля</small>
+            </div>
+          </form>
         </section>
-        <section class="search">
-          <header class="search__header heading">
-            <h2 class="visually-hidden">Поиск гостиницы в Седоне.</h2>
-            <p class="heading__title">Заинтересовались?</p>
-            <p class="heading__intro">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
-              гостиниц в Седоне&nbsp;</p>
-          </header>
-          <a class="button button--search" href="#">Найти гостиницу</a>
-        </section>
-        <div class="location">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994943.0972920308!2d-111.82951624876816!3d35.00317655746559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1659211446533!5m2!1sru!2sru"
-            width="320" height="350" style="border: 0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
       </main>
       <footer class="main-footer">
         <a class="main-footer__hashtag hashtag" href="https://twitter.com/hashtag/visitsedona">#visitSedona</a>
         <ul class="main-footer__social social">
-          <li class="social__item">
+          <li>
             <a class="social__link" href="https://vk.com/htmlacademy">
-              <svg class="social__icon" width="24" height="14" viewBox="0 0 24 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.45.948c.166-.546 0-.948-.795-.948H20.03c-.668 0-.976.347-1.143.73 0 0-1.335 3.196-3.226 5.272-.612.602-.89.793-1.224.793-.167 0-.418-.191-.418-.738V.948c0-.656-.184-.948-.74-.948H9.151c-.417 0-.668.304-.668.593 0 .621.946.765 1.043 2.513v3.798c0 .833-.153.984-.487.984-.89 0-3.055-3.211-4.34-6.885C4.45.288 4.198 0 3.527 0H.9C.15 0 0 .347 0 .73c0 .682.89 4.07 4.145 8.551C6.315 12.341 9.37 14 12.153 14c1.669 0 1.875-.368 1.875-1.003v-2.313c0-.737.158-.884.687-.884.39 0 1.057.192 2.615 1.667C19.11 13.216 19.403 14 20.405 14h2.625c.75 0 1.126-.368.91-1.096-.238-.724-1.088-1.775-2.215-3.022-.612-.71-1.53-1.475-1.809-1.858-.389-.491-.278-.71 0-1.147 0 0 3.2-4.426 3.533-5.929h.001Z"/>
+              <svg class="social__icon" width="24" height="14" aria-hidden="true" focusable="false" fill="currentColor">
+                <use href="img/sprite.svg#icon-vkontakte"></use>
               </svg>
               <span class="visually-hidden">VKontakte.</span>
             </a>
           </li>
-          <li class="social__item">
+          <li>
             <a class="social__link" href="https://t.me/htmlacademy">
-              <svg class="social__icon" width="22" height="18" viewBox="0 0 22 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="m21.44 1.622-3.17 14.944c-.239 1.055-.862 1.317-1.748.82l-4.828-3.557-2.33 2.24c-.258.259-.473.474-.97.474l.347-4.917 8.948-8.086c.39-.347-.084-.54-.604-.192L6.022 10.314 1.26 8.823C.224 8.5.205 7.787 1.476 7.29L20.104.113c.862-.323 1.617.192 1.335 1.51Z"/>
+              <svg class="social__icon" width="22" height="18" aria-hidden="true" focusable="false" fill="currentColor">
+                <use href="img/sprite.svg#icon-telegram"></use>
               </svg>
               <span class="visually-hidden">Telegram.</span>
             </a>
           </li>
-          <li class="social__item">
+          <li>
             <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
-              <svg class="social__icon" width="20" height="14" viewBox="0 0 20 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17.181 0H2.813C1.306 0 0 1.3 0 2.8v8.3C0 12.7 1.306 14 2.813 14h14.368c1.608 0 2.814-1.3 2.814-2.8V2.8c.1-1.5-1.206-2.8-2.814-2.8ZM7.033 10.4V3.6L13.866 7l-6.833 3.4Z"/>
+              <svg class="social__icon" width="20" height="14" aria-hidden="true" focusable="false" fill="currentColor">
+                <use href="img/sprite.svg#icon-youtube"></use>
               </svg>
               <span class="visually-hidden">Youtube.</span>
             </a>
@@ -146,9 +177,33 @@
         </ul>
         <a class="main-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__text">Разработано</span>
-          <img class="copyright__image" width="27" height="35" src="img/logo-academy.svg" alt="HTML Academy">
+          <svg class="copyright__icon" width="27" height="35" aria-hidden="true" focusable="false" fill="currentColor">
+            <use href="img/sprite.svg#icon-academy"></use>
+          </svg>
+          <span class="visually-hidden">HTML Academy</span>
         </a>
       </footer>
+      <div class="modal-container modal-container--close">
+        <div class="error">
+          <div class="error__header heading">
+            <h2 class="heading__title heading__title--size-m">Что-то пошло не&nbsp;так!</h2>
+            <p class="heading__intro">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+          </div>
+          <button class="error__button button">Ок</button>
+        </div>
+      </div>
+      <div class="modal-container modal-container--close">
+        <div class="approve">
+          <div class="approve__header heading">
+            <h2 class="heading__title heading__title--size-m">Ваш отзыв отправлен!</h2>
+            <p class="heading__intro">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+          </div>
+          <div class="approve__footer">
+            <button class="approve__button button">Закрыть окно</button>
+          </div>
+        </div>
+      </div>
     </div>
+    <script src="js/navigation.js"></script>
   </body>
 </html>

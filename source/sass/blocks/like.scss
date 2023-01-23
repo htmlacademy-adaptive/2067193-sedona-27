@@ -1,0 +1,44 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.like {
+  display: flex;
+  align-items: flex-end;
+  column-gap: 14px;
+
+  @include mixins.tablet {
+    column-gap: 9px;
+    padding-bottom: 5px;
+  }
+}
+
+.like__button {
+  padding: 0;
+  font-family: inherit;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: variables.$opacity-color;
+
+  @include mixins.desktop {
+    color: variables.$color-text-accent;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.like__counter {
+  font-weight: 700;
+  color: variables.$color-text-secondary;
+
+  @include mixins.desktop {
+    color: variables.$color-text-accent;
+  }
+}

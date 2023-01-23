@@ -1,0 +1,28 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.feedback {
+  padding-bottom: 27px;
+
+  @include mixins.tablet {
+    padding: 0 60px 64px;
+  }
+
+  @include mixins.desktop {
+    padding: 0 120px 64px;
+  }
+}
+
+.feedback__header {
+  padding: 36px 20px 28px;
+  border-bottom: solid 1px #e5e5e5;
+
+  @include mixins.tablet {
+    padding: 64px 106px 102px;
+    border-bottom: none;
+  }
+
+  @include mixins.desktop {
+    padding: 115px 262px 67px;
+  }
+}

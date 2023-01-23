@@ -1,0 +1,60 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.checkbox-control {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+
+  &:hover .checkbox-control__mark {
+    background-color: #e5e5e5;
+  }
+
+  &:active .checkbox-control__mark {
+    background-color: #d5d5d5;
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
+}
+
+.checkbox-control__input {
+  appearance: none;
+  position: absolute;
+
+  &:checked ~ .checkbox-control__mark::before {
+    width: 22px;
+    height: 16px;
+  }
+
+  &:focus-visible ~ .checkbox-control__mark {
+    outline: 3px solid variables.$color-text-active;
+  }
+}
+
+.checkbox-control__mark {
+  width: 46px;
+  height: 46px;
+  border-radius: 4px;
+  background-color: variables.$secondary-color;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    background-image: url("../img/form-checked.svg");
+  }
+}
+
+.checkbox-control__caption {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}

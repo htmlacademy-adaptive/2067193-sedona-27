@@ -1,0 +1,61 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.radio-control {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+
+  &:hover .radio-control__mark {
+    background-color: #e5e5e5;
+  }
+
+  &:active .radio-control__mark {
+    background-color: #d5d5d5;
+
+    &::before {
+      background-color: rgba(51, 51, 51, 0.3);
+    }
+  }
+}
+
+.radio-control__input {
+  appearance: none;
+  position: absolute;
+
+  &:checked ~ .radio-control__mark::before {
+    width: 16px;
+    height: 16px;
+  }
+
+  &:focus-visible ~ .radio-control__mark {
+    outline: 3px solid variables.$color-text-active;
+  }
+}
+
+.radio-control__mark {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: variables.$secondary-color;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: variables.$color-text-primary;
+  }
+}
+
+.radio-control__caption {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}

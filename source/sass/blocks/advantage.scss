@@ -1,0 +1,105 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.advantage {
+  position: relative;
+  padding: 25px 34px;
+  background-color: #eeeeee;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include mixins.tablet {
+    padding: 42px 50px;
+    flex-grow: 1;
+  }
+
+  @include mixins.desktop {
+    padding: 43px 43px 62px;
+  }
+}
+
+.advantage--light {
+  padding: 39px 20px 35px;
+  background-color: variables.$primary-color;
+  color: variables.$color-text-accent;
+
+  @include mixins.tablet {
+    padding: 42px 32px;
+  }
+
+  @include mixins.desktop {
+    padding: 50px 60px 53px;
+  }
+}
+
+.advantage--light-padding {
+  @include mixins.mobile-only {
+    padding: 71px 22px 39px 17px;
+  }
+}
+
+.advantage--border {
+  @include mixins.mobile-only {
+    &::before {
+      position: absolute;
+      right: 18px;
+      bottom: 0;
+      left: 18px;
+      height: 1px;
+      background-color: #d6d6d6;
+      content: "";
+    }
+  }
+}
+
+.advantage--padding {
+  @include mixins.tablet {
+    padding: 42px 34px;
+  }
+}
+
+.advantage__title {
+  margin: 0;
+  margin-bottom: 11px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+
+  @include mixins.tablet {
+    font-size: 21px;
+  }
+
+  @include mixins.desktop {
+    padding: 0 40px;
+  }
+}
+
+.advantage__title--padding {
+  @include mixins.desktop {
+    padding: 0 80px;
+  }
+}
+
+.advantage__description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.advantage__description::before {
+  display: block;
+  counter-increment: advantage__description;
+  content: "— №" counter(advantage__description) " —";
+  margin-bottom: 17px;
+
+  @include mixins.tablet {
+    margin-bottom: 25px;
+  }
+}
+
+.advantage__description--padding {
+  @include mixins.desktop {
+    padding: 0 24px;
+  }
+}

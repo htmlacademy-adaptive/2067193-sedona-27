@@ -1,0 +1,182 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.form-group {
+  position: relative;
+  margin: 0;
+  padding: 0 20px 22px;
+  border: none;
+
+  &:not(:last-of-type) {
+    border-bottom: solid 1px #e5e5e5;
+
+    @include mixins.tablet {
+      border-bottom: none;
+    }
+  }
+
+  @include mixins.tablet {
+    padding: 0;
+    padding-bottom: 46px;
+    border-bottom: none;
+    border-top: solid 1px #dbdbdb;
+    flex: 1;
+  }
+
+  @include mixins.desktop {
+    padding-bottom: 53px;
+  }
+}
+
+.form-group--width {
+  @include mixins.desktop {
+    min-width: 430px;
+  }
+}
+
+.form-group--border-none {
+  @include mixins.tablet {
+    border-top: none;
+  }
+}
+
+.form-group--padding-bottom {
+  @include mixins.tablet {
+    padding-bottom: 41px;
+  }
+
+  @include mixins.desktop {
+    padding-bottom: 53px;
+  }
+}
+
+.form-group--textarea-padding {
+  padding-bottom: 56px;
+
+  @include mixins.tablet {
+    padding-bottom: 48px;
+  }
+
+  @include mixins.desktop {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+}
+
+.form-group__description {
+  margin: 0 auto 20px;
+  padding: 0;
+  padding-top: 24px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: variables.$color-text-secondary;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include mixins.tablet {
+    padding-top: 2px;
+    margin-bottom: 28px;
+    width: 100%;
+    max-width: 400px;
+    font-size: 21px;
+  }
+}
+
+.form-group__description--padding-left {
+  @include mixins.desktop {
+    padding-left: 62px;
+  }
+}
+
+.form-group__description--padding-right {
+  @include mixins.desktop {
+    padding-right: 65px;
+  }
+}
+
+.form-group__control--margin-right {
+  @include mixins.tablet {
+    margin-right: 38px;
+  }
+
+  @include mixins.desktop {
+    margin-right: 0;
+  }
+}
+
+.form-group__control--margin-left {
+  @include mixins.tablet {
+    margin-left: 38px;
+  }
+
+  @include mixins.desktop {
+    margin-left: 0;
+  }
+}
+
+.form-group__list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  list-style: none;
+
+  @include mixins.tablet {
+    padding: 0 36px 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mixins.desktop {
+    padding: 17px 53px;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 62px;
+  }
+}
+
+.form-group__list--checkbox {
+  @include mixins.tablet {
+    padding: 0 84px;
+    column-gap: 32px;
+  }
+
+  @include mixins.desktop {
+    padding: 32px 44px;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 64px;
+  }
+}
+
+.form-group__textarea {
+  display: block;
+  padding: 14px 12px 0;
+  width: 100%;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: variables.$color-text-secondary;
+  background-color: variables.$secondary-color;
+  border: 4px solid transparent;
+  outline: none;
+  resize: none;
+
+  @include mixins.tablet {
+    padding: 12px 12px 10px;
+  }
+
+  &::placeholder {
+    color: variables.$opacity-color;
+  }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    background-color: variables.$color-text-accent;
+    border-color: #e5e5e5;
+  }
+}

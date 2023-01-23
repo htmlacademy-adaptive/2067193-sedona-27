@@ -1,0 +1,36 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.main-footer {
+  padding: 28px 18px 23px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mixins.tablet {
+    padding: 36px 60px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include mixins.desktop {
+    padding: 36px 120px;
+  }
+}
+
+.main-footer__hashtag {
+  margin-bottom: 34px;
+
+  @include mixins.tablet {
+    margin-bottom: 0;
+  }
+}
+
+.main-footer__social {
+  margin: 0;
+  margin-bottom: 40px;
+
+  @include mixins.tablet {
+    margin-bottom: 0;
+  }
+}

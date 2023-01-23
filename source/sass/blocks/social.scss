@@ -1,0 +1,38 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.social {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 6px;
+
+  @include mixins.tablet {
+    padding-right: 6px;
+  }
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  background-color: variables.$primary-color;
+  color: variables.$color-text-accent;
+  min-width: 48px;
+  min-height: 48px;
+  position: relative;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+}
+
+.social__link:active > .social__icon {
+  opacity: 0.3;
+}

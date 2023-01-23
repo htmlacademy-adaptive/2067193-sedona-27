@@ -1,0 +1,69 @@
+@use "../globals/variables.scss";
+@use "../globals/mixins.scss";
+
+.gallery-post {
+  padding: 24px 20px 27px;
+  border-bottom: solid 1px #e5e5e5;
+
+  @include mixins.tablet {
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
+.gallery-post__image {
+  display: block;
+  width: 100%;
+}
+
+.gallery-post__wrapper {
+  padding-top: 15px;
+
+  @include mixins.tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 20px 15px;
+  }
+
+  @include mixins.desktop {
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    background-color: variables.$opacity-color;
+  }
+}
+
+.gallery-post__label {
+  margin-bottom: 11px;
+
+  @include mixins.tablet {
+    margin-bottom: 0;
+  }
+}
+
+.gallery-post__title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: variables.$color-text-secondary;
+  text-transform: uppercase;
+
+  @include mixins.tablet {
+    margin-bottom: 1px;
+  }
+
+  @include mixins.desktop {
+    color: variables.$color-text-accent;
+  }
+}
+
+.gallery-post__author {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+
+  @include mixins.desktop {
+    color: variables.$color-text-accent;
+  }
+}
