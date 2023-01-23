@@ -1,6 +1,6 @@
 # Личный проект «Седона» 
 
-* Студент: [Anna Semenova](https://up.htmlacademy.ru/adaptive/27/user/2067193).
+* Студент: [Анна Семенова](https://up.htmlacademy.ru/adaptive/27/user/2067193).
 * Наставник: [Виктория Никитина](https://htmlacademy.ru/profile/id1217273).
 
 ---
