@@ -3,7 +3,6 @@
 
 .navigation {
   position: relative;
-  z-index: 2;
 }
 
 .navigation--closed .navigation__toggle {
@@ -197,7 +196,7 @@
   }
 }
 
-.navigation__link[aria-current="page"] {
+.navigation__link--active {
   @include mixins.tablet {
     color: #766357;
   }
