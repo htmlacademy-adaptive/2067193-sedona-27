@@ -9,7 +9,7 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
-import {deleteAsync as del} from 'del';
+import del from 'del';
 import browser from 'browser-sync';
 
 // Styles
