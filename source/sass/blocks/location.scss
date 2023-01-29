@@ -2,46 +2,28 @@
 @use "../globals/variables.scss";
 
 .location {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 10px;
-  background-image: url("../img/map-mobile.jpg");
-  background-size: cover;
-  background-color: #3f5e72;
-
-  @include mixins.retina {
-    background-image: url("../img/map-mobile@2x.jpg");
-    background-size: 320px auto;
-  }
 
   @include mixins.tablet {
     margin-bottom: 0;
-    background-image: url("../img/map-tablet.jpg");
-    background-size: cover;
-    background-color: #3f5e72;
-
-    @include mixins.retina {
-      background-image: url("../img/map-tablet@2x.jpg");
-      background-size: 768px auto;
-    }
-  }
-
-  @include mixins.desktop {
-    margin-bottom: 0;
-    background-image: url("../img/map-desktop.jpg");
-    background-size: cover;
-    background-color: #3f5e72;
-
-    @include mixins.retina {
-      background-image: url("../img/map-desktop@2x.jpg");
-      background-size: 1200px auto;
-    }
   }
 }
 
-.location iframe {
+.location__iframe {
   display: block;
   width: 100%;
+}
+
+.location__image {
+  display: none;
+  width: 100%;
+  background-color: #f2f1ec;
+}
+
+.location--nojs .location__iframe {
+  display: none;
+}
+
+.location--nojs .location__image {
+  display: block;
 }
