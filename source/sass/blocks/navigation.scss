@@ -3,6 +3,7 @@
 
 .navigation {
   position: relative;
+  z-index: 2;
 }
 
 .navigation--closed .navigation__toggle {
